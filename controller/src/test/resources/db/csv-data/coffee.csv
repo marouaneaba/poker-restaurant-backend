@@ -1,0 +1,4 @@
+id,name,selected,available,quantity
+1,coffee1,true,true,1
+2,coffee2,false,false,1
+3,coffee3,false,false,1
