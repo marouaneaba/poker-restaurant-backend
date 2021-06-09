@@ -45,7 +45,7 @@ public class CoffeeControllerTest {
 
   @Autowired
   private ObjectMapper jsonMapper;
-  
+
   @BeforeEach
   public void setUp() {
     Mockito.when(this.bistrotFacade.get(anyInt())).thenReturn(this.coffeeDomain);

@@ -4,10 +4,10 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
 
 
-    <property name="coffee_file" value="./db/csv-data/com.example.demo.coffee.csv"/>
+    <property name="coffee_file" value="./db/csv-data/coffee.csv"/>
 
-    <changeSet id="Lot 1 : 2-init com.example.demo.coffee table for dev" author="marouane abakarim" dbms="h2">
-        <loadData tableName="com.example.demo.coffee" file="./db/csv-data/com.example.demo.coffee.csv" encoding="UTF-8"/>
+    <changeSet id="Lot 1 : 2-init coffee table for dev" author="marouane abakarim" dbms="h2">
+        <loadData tableName="coffee" file="./db/csv-data/coffee.csv" encoding="UTF-8"/>
     </changeSet>
 
 </databaseChangeLog>

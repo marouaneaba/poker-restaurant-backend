@@ -18,7 +18,7 @@ public abstract class AbstractBistrotCore implements BistrotCore {
 
     val version = Optional.ofNullable(this.getClass().getAnnotation(Implementation.class))
                           .map(Implementation::version)
-                          .orElseThrow(() -> new FatalBeanException("AbstractShoeCore implementation should be annotated with @Implementation"));
+                          .orElseThrow(() -> new FatalBeanException("AbstractBistrotCore implementation should be annotated with @Implementation"));
 
     this.bistrotFacade.register(version, this);
   }
