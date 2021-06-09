@@ -1,6 +1,6 @@
 package com.poker.shop.core;
 
-import com.example.demo.annotation.Implementation;
+import com.example.demo.core.Implementation;
 
 @Implementation(version = 2)
 public class ShoeCoreNew /*extends AbstractShoeCore*/ {

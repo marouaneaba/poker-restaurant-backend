@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>controller</artifactId>
+  <artifactId>com.example.demo.controller</artifactId>
 
   <dependencies>
     <dependency>
@@ -30,6 +30,11 @@
     <dependency>
       <groupId>com.example</groupId>
       <artifactId>core-new</artifactId>
+      <version>${parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.example</groupId>
+      <artifactId>core-bistrot</artifactId>
       <version>${parent.version}</version>
     </dependency>
   </dependencies>

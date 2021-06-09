@@ -1,7 +1,10 @@
-package coffee.entity;
+package com.example.demo.coffee.entity;
+
+import lombok.Builder;
 
 import javax.persistence.*;
 
+@Builder
 @Entity
 public class CoffeeEntity {
 

@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
   <packaging>pom</packaging>
   <modules>
-    <module>controller</module>
+    <module>com.example.demo.controller</module>
     <module>dto</module>
     <module>core</module>
     <module>core-legacy</module>

@@ -7,7 +7,7 @@
   - [What are we talking about](#what-are-we-talking-about)
   - [How we address the issue](#how-we-address-the-issue)
   - [Make DTOs the basis of your application](#make-dtos-the-basis-of-your-application)
-  - [Make your controller agnostic of the core](#make-your-controller-agnostic-of-the-core)
+  - [Make your com.example.demo.controller agnostic of the core](#make-your-com.example.demo.controller-agnostic-of-the-core)
     - [Core abstraction](#core-abstraction)
     - [Implementing your core](#implementing-your-core)
   - [Versioning APIs](#versioning-apis)
@@ -79,16 +79,16 @@ The first suggestion of this post is then to create your DTO _before_ your domai
 
 </details>
 
-## Make your controller agnostic of the core
+## Make your com.example.demo.controller agnostic of the core
 
 An important part of the idea is also that your controllers will be de facto _static_ once it will be consumed by at least one client.
-Indeed, you cannot control the workload of your clients, hence you will have to adapt to them, and guarantee them your service for as long as you judge fit (in practice, since money drives us, if the client is worth to keep, we all know the controller will remain untouched as long as this client does not migrate).
+Indeed, you cannot control the workload of your clients, hence you will have to adapt to them, and guarantee them your service for as long as you judge fit (in practice, since money drives us, if the client is worth to keep, we all know the com.example.demo.controller will remain untouched as long as this client does not migrate).
 
 ![image](https://user-images.githubusercontent.com/6195718/72347878-647df180-36d9-11ea-97c7-4a618b08d464.png)
 
-This means that you will need your controller to be agnostic (as for the DTOs) of the business implementation. Once again, do your customer care if you are using a new table which requires them to update to a new API, if they do not need it anyway?
+This means that you will need your com.example.demo.controller to be agnostic (as for the DTOs) of the business implementation. Once again, do your customer care if you are using a new table which requires them to update to a new API, if they do not need it anyway?
 
-So the whole point here is again to make your controller implementation agnostic of the core implementation.
+So the whole point here is again to make your com.example.demo.controller implementation agnostic of the core implementation.
 
 <details>
 <summary><b>The shoe example</b></summary>
@@ -104,7 +104,7 @@ So the whole point here is again to make your controller implementation agnostic
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>controller</artifactId>
+  <artifactId>com.example.demo.controller</artifactId>
 
   <dependencies>
     <dependency>
@@ -166,8 +166,8 @@ public class ShoeController {
 
 ### Core abstraction
 
-Well, we all know your controller needs to call some business code, whether to access direct domain data, or to compute some complex operations.
-So the whole point of making your controller "business-agnostic" is to create a core abstraction, depending only on DTOs.
+Well, we all know your com.example.demo.controller needs to call some business code, whether to access direct domain data, or to compute some complex operations.
+So the whole point of making your com.example.demo.controller "business-agnostic" is to create a core abstraction, depending only on DTOs.
 The contracts of this implementation should be something like:
 
 > Given the input DTO, return an output DTO.
@@ -344,7 +344,7 @@ To run the application, you can run the following command in the root folder of 
 
 ```shell script
 mvn clean install && \
-  java -jar controller/target/controller-1.0.jar
+  java -jar com.example.demo.controller/target/com.example.demo.controller-1.0.jar
 ```
 
 ## Version 1
