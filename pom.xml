@@ -11,6 +11,7 @@
     <module>core</module>
     <module>core-legacy</module>
     <module>core-new</module>
+    <module>core-bistrot</module>
   </modules>
 
   <parent>
@@ -70,6 +71,11 @@
       <groupId>org.liquibase</groupId>
       <artifactId>liquibase-core</artifactId>
       <version>4.3.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <version>1.5.9.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
