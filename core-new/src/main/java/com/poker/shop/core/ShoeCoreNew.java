@@ -1,18 +1,11 @@
 package com.poker.shop.core;
 
-import com.example.demo.core.AbstractShoeCore;
 import com.example.demo.core.Implementation;
-import com.example.demo.dto.in.ShoeFilter;
-import com.example.demo.dto.out.Shoe;
-import com.example.demo.dto.out.Shoes;
-
-import java.math.BigInteger;
-import java.util.List;
 
 @Implementation(version = 2)
-public class ShoeCoreNew extends AbstractShoeCore {
+public class ShoeCoreNew /*extends AbstractShoeCore*/ {
 
-  @Override
+  /*@Override
   public Shoes search(final ShoeFilter filter) {
     return Shoes.builder()
                 .shoes(List.of(Shoe.builder()
@@ -22,4 +15,6 @@ public class ShoeCoreNew extends AbstractShoeCore {
                                    .build()))
                 .build();
   }
+  */
+
 }

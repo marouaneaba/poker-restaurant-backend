@@ -11,6 +11,7 @@
     <module>core</module>
     <module>core-legacy</module>
     <module>core-new</module>
+    <module>core-bistrot</module>
   </modules>
 
   <parent>
@@ -29,6 +30,7 @@
   <properties>
     <java.version>14</java.version>
     <spring.version>3.0.0</spring.version>
+    <liquibase.version>4.3.5</liquibase.version>
   </properties>
 
   <dependencies>
@@ -40,7 +42,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
@@ -69,7 +70,7 @@
     <dependency>
       <groupId>org.liquibase</groupId>
       <artifactId>liquibase-core</artifactId>
-      <version>4.3.5</version>
+      <version>${liquibase.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
